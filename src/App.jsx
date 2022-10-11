@@ -24,7 +24,10 @@ function App() {
       {pathname === "/" && <Search />}
       <Routes>
         <Route path={"/"} element={<Home />} />
-        <Route path={`photos/${query}`} element={query && <Photos />} />
+        <Route
+          path={`photos/${query}`}
+          element={query ? <Photos /> : <h4 style={{textAlign: 'center'}}>You entered no search term</h4>}
+        />
         <Route path={"cart"} element={<Cart />} />
         <Route
           path={":img_query"}
