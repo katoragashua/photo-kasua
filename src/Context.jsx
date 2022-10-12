@@ -9,7 +9,7 @@ const ContextProvider = (props) => {
   const [page, setPage] = useState(() => 1);
   const [favoriteImages, setFavoriteImages] = useState(() => []);
   const [photographer, setPhotographer] = useState(() => "");
-  const [screenSize, setScreenSize] = useState(() => false);
+  const [screenSize, setScreenSize] = useState(() => window.innerWidth);
 
   // Declaring a state for the Search components background
   const [searchBg, setSearchBg] = useState(() => "");
@@ -102,6 +102,7 @@ const ContextProvider = (props) => {
          setScreenSize(window.innerWidth);
        });
    }, []);
+
 
   // const handleQuery = (e) => {
   //   const {value, name} = e.target

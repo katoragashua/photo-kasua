@@ -3,12 +3,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
-  /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgba(36, 36, 36, 0.113);
-  /* background-color: whitesmoke; */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,10 +22,10 @@ a:hover {
 }
 
 body, .app {
-  background-color: rgba(36, 36, 36, 0.113);
+  /* background-color: rgba(36, 36, 36, 0.113); */
   margin: 0;
   padding: 0;
-  color: white;
+  color: black;
   /* color: #242424; */
   font-family: "Poppins","Lato", "Rubik",  Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -168,12 +163,19 @@ header {
 
 .img-div {
   position: relative;
+  color: #fff;
+}
+
+.img-div small, 
+.img-div span {
+  color: white;
+  text-shadow: 1px 1px 1px black;
 }
 
 .img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .cart-img-div {
@@ -284,8 +286,6 @@ header {
 .photos-page {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  /* grid-template-rows: 200px;  */
-  /* grid-auto-rows: 200px; */
   grid-auto-flow: dense;
   grid-gap: 1em;
   padding: 2em 0;

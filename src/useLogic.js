@@ -1,8 +1,8 @@
 import {useState, useEffect, useRef, useContext} from "react"
-
+import {Context} from "./Context"
 function useLogic() {
     const [hovered, setHovered] = useState(() => false)
-
+    const {screenSize} = useContext(Context);
     // const switchHoverState = () => setHovered(prev => !prev)
 
     // Changing hover states
@@ -22,6 +22,8 @@ function useLogic() {
           hover.removeEventListener("mouseleave", leaveHoverState);
         }; 
     }, [])
+
+    const update = (val) => setHovered(val)
     
     // useEffect(() => {
     //   window.addEventListener("resize", () => {
@@ -37,7 +39,7 @@ function useLogic() {
 
     // }, []);
 
-    return {hovered, hoverRef}
+    return {hovered, hoverRef, update}
 }
 
 export default useLogic

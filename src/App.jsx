@@ -9,6 +9,7 @@ import Cart from "./pages/Cart";
 import Info from "./pages/Info";
 import { useLocation } from "react-router-dom";
 import { Context } from "./Context";
+import useLogic from "./useLogic"
 
 function App() {
   // Getting image and photos state to be passed to Info component
@@ -39,7 +40,7 @@ function App() {
         <a href="https://unsplash.com" target="_blank">
           Unsplash
         </a>{" "}
-        for letting developers like me use their Api
+        for letting developers like me use their API
       </h5>
     </div>
   );

@@ -16,7 +16,8 @@ const Img = (props) => {
 
 // Getting hover logic from useLogic custom component
     const {hovered, hoverRef} = useLogic()
-    
+
+
     const inCart = cart.some(photo => photo.id === img.id)
 
     // Creating a logic to handle orientation
@@ -35,7 +36,7 @@ const Img = (props) => {
     // Getting the photographer
     const photographer = <small className="photographer"><img src={user.profile_image.small} alt={`${user.first_name}'s profile photo`} className="profile-photo"/> {user.first_name} {user.last_name}</small>
 
-    const cartIcon = inCart?<i className="ri-shopping-cart-fill add icon" onClick={() => removeFromCart(id)}></i>  : hovered && <i className="ri-add-circle-line add icon" onClick={() => addToCart(id)}></i> 
+    const cartIcon = inCart?<i className="ri-shopping-cart-fill add icon" onClick={() => removeFromCart(id)}></i>  : <i className="ri-add-circle-line add icon" onClick={() => addToCart(id)}></i> 
 
     // For image likes
     const imgLikes = <span className="likes">{likes}</span>
@@ -48,11 +49,11 @@ const Img = (props) => {
     return (
         <div className={`img-div ${orientation()}`} ref={hoverRef}>
             {/* icons appear on hover */}
-            {hovered && photographer}
-            {hovered && heartIcon}
-            {hovered && cartIcon}
-            {hovered && imgLikes}
-            {hovered && imgPrice}
+            {hovered? photographer :  screenSize < 1200? photographer: ""}
+            {hovered? heartIcon :  screenSize < 1200? heartIcon: ""}
+            {hovered? cartIcon :  screenSize < 1200? cartIcon: ""}
+            {hovered? imgLikes :  screenSize < 1200? imgLikes: ""}
+            {hovered? imgPrice :  screenSize < 1200? imgPrice: ""}
             <Link to={`/${id}`}><img src={urls.small} alt="" className={`img `} /></Link>
             
         </div>
@@ -60,3 +61,5 @@ const Img = (props) => {
 }
 
 export default Img
+
+//|| screenSize < 1200

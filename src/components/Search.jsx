@@ -66,7 +66,13 @@ const Search = (props) => {
         Download free stock photos, royalty free, or buy them in frames.
       </h2>
       <div className="container">{searchQuery}</div>
-      <p style={{ textAlign: "center", textShadow: "2px 2px 2px black" }}>
+      <p
+        style={{
+          textAlign: "center",
+          textShadow: "2px 2px 2px black",
+          color: "white",
+        }}
+      >
         photo by {photographer}
       </p>
     </div>
