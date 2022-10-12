@@ -124,7 +124,7 @@ header {
   font-size: 1.1rem;
   text-align: center;
   width: 60%;
-  background: url("./images/search-line.svg");
+  background-image: url("./images/search-line.svg");
   background-color: white;
   background-repeat: no-repeat;
   padding: 1em;
