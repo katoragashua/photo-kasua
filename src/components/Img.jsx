@@ -22,9 +22,9 @@ const Img = (props) => {
 
     // Creating a logic to handle orientation
     const orientation = () => {
-        if(ratio < .8) {
+        if(ratio <= .81) {
             return "landscape"
-        }else if(ratio < 1.2) {
+        }else if(ratio < 1.2 && ratio > .85) {
             return "squarish"
         }else {
             return "portrait"
