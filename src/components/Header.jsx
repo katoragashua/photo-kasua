@@ -16,10 +16,18 @@ const Header = () => {
 
   return (
     <header>
-      <div className="header container">
+      <div className="header container" id="header">
         <div className="logo-div">
           <Link to={"/"}>
-            <h2 className="logo"  onClick={() => updateQuery("")}>Phot<img src="./images/camera-lens-fill.svg" className="lens" alt="" />-Kasua</h2>
+            <h2 className="logo" onClick={() => updateQuery("")}>
+              Phot
+              <img
+                src="./images/camera-lens-fill.svg"
+                className="lens"
+                alt=""
+              />
+              -Kasua
+            </h2>
           </Link>
         </div>
         <nav className="nav">

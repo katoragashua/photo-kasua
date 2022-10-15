@@ -280,13 +280,27 @@ header {
   border-radius: 50%;
 }
 
+.top {
+  position: fixed;
+  right: 0;
+  bottom: 2em;
+  background: rgba(231,76,60,.4);
+  border-radius: 50%;
+  padding: 1em;
+  width: .5em;
+  height: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Pages */
 
 .home-page,
 .photos-page {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  /* grid-auto-rows: minmax(200px, 280px); */
+  /* grid-auto-rows: minmax(250px, 280px); */
   grid-auto-flow: dense;
   grid-gap: 1em;
   padding: 2em 0;
@@ -306,16 +320,16 @@ header {
 /* Orientation */
 
 .landscape {
-  grid-column: span 3;
+  grid-column: span 2;
 }
 
 .portrait {
   grid-row: span 2;
-  grid-column: span 3;
+  grid-column: span 2;
 }
 
 .squarish {
-  grid-column: span 3;
+  grid-column: span 2;
   grid-row: span 1;
 }
 

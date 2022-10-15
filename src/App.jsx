@@ -27,7 +27,15 @@ function App() {
         <Route path={"/"} element={<Home />} />
         <Route
           path={`photos/${query}`}
-          element={query ? <Photos /> : <h4 style={{textAlign: 'center'}}>You entered no search term</h4>}
+          element={
+            query ? (
+              <Photos />
+            ) : (
+              <h4 style={{ textAlign: "center" }}>
+                You entered no search term
+              </h4>
+            )
+          }
         />
         <Route path={"cart"} element={<Cart />} />
         <Route
@@ -42,6 +50,11 @@ function App() {
         </a>{" "}
         for letting developers like me use their API
       </h5>
+      <div>
+        <a href="#header" className="top">
+          ↑
+        </a>
+      </div>
     </div>
   );
 }
