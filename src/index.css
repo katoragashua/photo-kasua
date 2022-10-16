@@ -117,6 +117,7 @@ header {
 }
 
 .search-inp {
+  position: relative;
   color: #242424;
   outline: 1px solid rgb(227, 169, 163);
   border: none;
@@ -270,13 +271,16 @@ header {
 
 .photographer {
   position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   bottom: 10px;
-  left: 10px;
+  left: 5px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 .profile-photo {
-  margin-left: 1rem;
+  margin-left: 10px;
   border-radius: 50%;
 }
 
@@ -300,7 +304,7 @@ header {
 .photos-page {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  /* grid-auto-rows: minmax(250px, 280px); */
+  /* grid-auto-rows: minmax(100px, 280px); */
   grid-auto-flow: dense;
   grid-gap: 1em;
   padding: 2em 0;
@@ -330,7 +334,7 @@ header {
 
 .squarish {
   grid-column: span 2;
-  grid-row: span 2;
+  grid-row: span 1;
 }
 
 @media screen and (max-width: 420px) {
