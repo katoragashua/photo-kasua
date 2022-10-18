@@ -12,6 +12,11 @@
   --font-color: rgba(231,76,60,1);
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: 1s .5s linear;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -297,6 +302,7 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 
 /* Pages */
 
