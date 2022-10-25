@@ -28,7 +28,7 @@ const Info = (props) => {
                 <p>For hire: {info.user.for_hire? "Yes": "No"}</p>
                 <p>Location: {info.location.title}</p>
                 <p>Description: {info.description}</p>
-                <a href={info.links.download} target="_blank"><small className="download">Download Image</small></a>
+                <a href={info.urls.regular} download target="_blank"><small className="download">Download Image</small></a>
             </div>
             
         </div>

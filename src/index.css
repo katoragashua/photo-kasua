@@ -170,6 +170,7 @@ header {
 .img-div {
   position: relative;
   color: #fff;
+  margin-bottom: .5em;
 }
 
 .img-div small, 
@@ -308,11 +309,13 @@ header {
 
 .home-page,
 .photos-page {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
   /* grid-auto-rows: minmax(100px, 280px); */
-  grid-auto-flow: dense;
-  grid-gap: 1em;
+  /* grid-auto-flow: dense; */
+  /* grid-gap: 1em; */
+  columns: 4;
+  column-gap: 1em;
   padding: 2em 0;
   padding-top: 1em;
 }
@@ -329,7 +332,7 @@ header {
 }
 /* Orientation */
 
-.landscape {
+/* .landscape {
   grid-column: span 2;
 }
 
@@ -341,9 +344,23 @@ header {
 .squarish {
   grid-column: span 2;
   grid-row: span 1;
+} */
+
+@media screen and (max-width: 1280px) {
+.home-page,
+.photos-page {
+  columns: 3;
+}
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 968px) {
+.home-page,
+.photos-page {
+  columns: 2;
+}
+}
+
+@media screen and (max-width: 620px) {
 
 .info-page {
   flex-direction: column;
@@ -358,8 +375,8 @@ header {
   width: 100%;
 }
 
-.cart-img-div {
-  
+.home-page,
+.photos-page {
+  columns: 1;
 }
-
 }
