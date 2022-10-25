@@ -11,7 +11,7 @@ const CartImg = (props) => {
 
     const delBtn = hovered? <i className="ri-delete-bin-fill del icon" ref={hoverRef} onClick={() => removeFromCart(img.id)}></i> : <i className="ri-delete-bin-line del icon" ref={hoverRef}></i>
 
-    const price =  <span>${img.price}</span>
+    const price = <span>${img.price.toFixed(2)}</span>;
 
     return (
         <div className="cart-img-div">

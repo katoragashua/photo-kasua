@@ -56,11 +56,12 @@ header {
       "l l l n n n"
   ;
   row-gap: 2em;
-  align-items: baseline;
+  align-items: center;
 }
 
 .logo-div {
   grid-area: l;
+  align-self: start;
 }
 
 .logo {
@@ -96,7 +97,6 @@ header {
   display: inline-block;
   position: relative;
   top: 3px;
-  /* border: solid; */
 }
 
 .nav {
@@ -104,6 +104,7 @@ header {
   justify-content: flex-end;
   gap: 3em;
   grid-area: n;
+  margin-bottom: -10px;
 }
 
 .search {
@@ -290,9 +291,9 @@ header {
 
 .top {
   position: fixed;
-  right: 0;
+  right: 1em;
   bottom: 2em;
-  background: rgba(231,76,60,.4);
+  background: rgba(231,76,60,.2);
   border-radius: 50%;
   padding: 1em;
   width: .5em;
@@ -300,6 +301,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.top:hover {
+  background: rgb(231, 77, 60);
+  transition: ease 1s;
 }
 
 
@@ -357,6 +363,11 @@ header {
 .photos-page {
   columns: 2;
 }
+
+.cart-img {
+  width: 35vw;
+}
+
 }
 
 @media screen and (max-width: 620px) {
@@ -372,6 +383,10 @@ header {
 
 .img-info {
   width: 100%;
+}
+
+.cart-img {
+  width: 50vw;
 }
 
 .home-page,
