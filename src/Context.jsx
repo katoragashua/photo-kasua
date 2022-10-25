@@ -59,7 +59,7 @@ const ContextProvider = (props) => {
       setHour((prev) => new Date().getHours());
     }, 60000);
     fetch(
-      `https://api.unsplash.com//photos/random/?query=nature&orientation=landscape&client_id=hjRE5t2RVXBqp561CfadH4aoW5oMSuEhDXsDxFJJ_nU`
+      `https://api.unsplash.com//photos/random/?query=outside nature&orientation=landscape&client_id=hjRE5t2RVXBqp561CfadH4aoW5oMSuEhDXsDxFJJ_nU`
     )
       .then((res) => res.json())
       .then((data) => {
