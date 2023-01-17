@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Img from "../components/Img";
 import { Context } from "../Context";
+import Masonry from "react-masonry-css";
 
 const Photos = (props) => {
   const { photos, incrementPageNum } = useContext(Context);
