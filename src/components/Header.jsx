@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Context } from "../Context";
 
 const Header = () => {
-
+  const scrollRef = useRef(null);
   const { cart, updateQuery } = useContext(Context);
 
   const cartIcon =
@@ -14,8 +14,27 @@ const Header = () => {
       <i className="ri-shopping-cart-line cart icon"></i>
     );
 
+    useEffect(() => {
+      window.addEventListener("scroll", () => scrollRef.current.style.position = "sticky");
+      return () => window.removeEventListener("scroll", () => scrollRef.current.style.position = "sticky")
+    }, [])
+
+    // useEffect(() => {
+    //   window.addEventListener(
+    //     "scrollend",
+    //     () => (scrollRef.current.style.position = "relative")
+    //   );
+    //   return () =>
+    //     window.removeEventListener(
+    //       "scrollend",
+    //       () => (scrollRef.current.style.position = "relative")
+    //     );
+    // }, []);
+
+    console.log(scrollRef.current);
+
   return (
-    <header>
+    <header ref={scrollRef}>
       <div className="header container" id="header">
         <div className="logo-div">
           <Link to={"/"}>

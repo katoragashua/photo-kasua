@@ -93,7 +93,7 @@ const ContextProvider = (props) => {
   // Setting the screenSize state to the window width and cleanup 
    ;
 
-   useState(() => {
+   useEffect(() => {
      window.addEventListener("resize", () => {
        setScreenSize(window.innerWidth);
      });

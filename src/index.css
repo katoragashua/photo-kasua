@@ -32,6 +32,7 @@ body,
   margin: 0;
   padding: 0;
   color: black;
+  position: relative;
   /* color: #242424; */
   font-family: "Poppins", "Lato", "Rubik", Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -47,7 +48,11 @@ h1 {
 /* My Styles */
 header {
   background-color: #242424;
-  z-index: -1;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+
 }
 
 .header {
@@ -287,25 +292,6 @@ header {
   border-radius: 50%;
 }
 
-.top {
-  position: fixed;
-  right: 1em;
-  bottom: 2em;
-  background: rgba(231, 76, 60, 0.2);
-  border-radius: 50%;
-  padding: 1em;
-  width: 0.5em;
-  height: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.top:hover {
-  background: rgb(231, 77, 60);
-  transition: 1s ease-in-out;
-}
-
 /* Pages */
 
 .home-page,
@@ -329,14 +315,14 @@ header {
   width: auto;
 }
 .my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
+  padding-left: 20px; /* gutter size */
   background-clip: padding-box;
 }
 
 /* Style your items */
 .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
-  /* background: grey;
-  margin-bottom: 30px; */
+  /* background: grey; */
+  margin-bottom: 20px;
 }
 
 .cart-page {
