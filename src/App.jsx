@@ -9,14 +9,14 @@ import Cart from "./pages/Cart";
 import Info from "./pages/Info";
 import { useLocation } from "react-router-dom";
 import { Context } from "./Context";
-import useLogic from "./useLogic"
+import useWindowSize from "./useWindowSize"
 
 function App() {
   // Getting image and photos state to be passed to Info component
-  const { images, query, photos, screenSize} = useContext(Context);
+  const { images, query, photos} = useContext(Context);
   // Getting pathname
   const { pathname } = useLocation();
-  console.log(screenSize);
+  const {windowSize} = useWindowSize();
 
   return (
     <div className="app">
@@ -50,11 +50,6 @@ function App() {
         </a>{" "}
         for letting developers like me use their API
       </h5>
-      <div>
-        <a href="#header" className="top">
-          ↑
-        </a>
-      </div>
     </div>
   );
 }

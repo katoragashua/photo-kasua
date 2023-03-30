@@ -19,20 +19,6 @@ const Header = () => {
       return () => window.removeEventListener("scroll", () => scrollRef.current.style.position = "sticky")
     }, [])
 
-    // useEffect(() => {
-    //   window.addEventListener(
-    //     "scrollend",
-    //     () => (scrollRef.current.style.position = "relative")
-    //   );
-    //   return () =>
-    //     window.removeEventListener(
-    //       "scrollend",
-    //       () => (scrollRef.current.style.position = "relative")
-    //     );
-    // }, []);
-
-    console.log(scrollRef.current);
-
   return (
     <header ref={scrollRef}>
       <div className="header container" id="header">
